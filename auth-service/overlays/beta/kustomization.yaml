@@ -1,0 +1,19 @@
+namespace: flyingjack-beta
+
+resources:
+  - ../../base
+  - namespace.yaml
+
+configMapGenerator:
+  - name: auth-service-config
+    behavior: merge
+    literals:
+      - SPRING_PROFILES_ACTIVE=beta
+    files:
+      - application-beta.yml
+
+# Secrets are pre-created manually in the cluster — see DEPLOY.md
+# Spring Cloud Kubernetes discovers them via label: secret.group
+
+patches:
+  - path: deployment-patch.yaml
