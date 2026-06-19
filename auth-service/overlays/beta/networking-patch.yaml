@@ -13,14 +13,6 @@ spec:
         credentialName: beta-auth-flyingjack-top-tls
       hosts:
         - "beta-auth.flyingjack.top"
-    - port:
-        number: 80
-        name: http
-        protocol: HTTP
-      tls:
-        httpsRedirect: true
-      hosts:
-        - "beta-auth.flyingjack.top"
 ---
 apiVersion: networking.istio.io/v1
 kind: VirtualService
