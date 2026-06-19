@@ -32,7 +32,23 @@ spec:
   gateways:
     - auth-gateway
   http:
-    - route:
+    - match:
+        - uri:
+            prefix: /oauth2/
+        - uri:
+            prefix: /.well-known/
+      route:
+        - destination:
+            host: auth-service
+            subset: v1
+            port:
+              number: 80
+    - match:
+        - uri:
+            prefix: /api/
+      rewrite:
+        uri: /
+      route:
         - destination:
             host: auth-service
             subset: v1
