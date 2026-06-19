@@ -3,6 +3,7 @@ namespace: flyingjack-beta
 resources:
   - ../../base
   - namespace.yaml
+  - certificate.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -19,3 +20,9 @@ configMapGenerator:
 patches:
   - path: deployment-patch.yaml
   - path: networking-patch.yaml
+  - patch: |-
+      - op: replace
+        path: /metadata/namespace
+        value: istio-system
+    target:
+      kind: Certificate

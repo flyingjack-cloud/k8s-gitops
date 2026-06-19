@@ -10,7 +10,15 @@ spec:
         protocol: HTTPS
       tls:
         mode: SIMPLE
-        credentialName: internal-tls-cert
+        credentialName: beta-auth-flyingjack-top-tls
+      hosts:
+        - "beta-auth.flyingjack.top"
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
       hosts:
         - "beta-auth.flyingjack.top"
 ---

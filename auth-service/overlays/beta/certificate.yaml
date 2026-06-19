@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: beta-auth-flyingjack-top-tls
+spec:
+  secretName: beta-auth-flyingjack-top-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+    - beta-auth.flyingjack.top
