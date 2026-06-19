@@ -5,12 +5,9 @@ metadata:
 spec:
   servers:
     - port:
-        number: 443
-        name: https
-        protocol: HTTPS
-      tls:
-        mode: SIMPLE
-        credentialName: beta-auth-flyingjack-top-tls
+        number: 80
+        name: http
+        protocol: HTTP
       hosts:
         - "beta-auth.flyingjack.top"
 ---
