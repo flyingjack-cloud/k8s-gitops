@@ -3,6 +3,7 @@ namespace: flyingjack-beta
 resources:
   - ../../base
   - namespace.yaml
+  - nodeport.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
