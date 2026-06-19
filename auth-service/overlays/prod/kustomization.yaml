@@ -1,4 +1,4 @@
-namespace: prod
+namespace: flyingjack-prod
 
 resources:
   - ../../base
