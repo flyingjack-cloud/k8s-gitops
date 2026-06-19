@@ -1,16 +1,3 @@
-spring:
-  data:
-    redis:
-      host: ${REDIS_HOST}
-      port: 6379
-      password: ${REDIS_PASSWORD}
-      database: 0
-      timeout: 5000
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-
 springdoc:
   swagger-ui:
     enabled: false

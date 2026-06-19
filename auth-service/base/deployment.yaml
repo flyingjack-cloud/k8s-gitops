@@ -29,6 +29,12 @@ spec:
             - containerPort: 8081
               protocol: TCP
               name: actuator
+          envFrom:
+            # 将 Secret 的所有 key 直接注入为 OS 环境变量
+            - secretRef:
+                name: auth-connect
+            - secretRef:
+                name: cache-access-secret
           env:
             # 从config中获取激活的profiles注入到env
             - name: SPRING_PROFILES_ACTIVE

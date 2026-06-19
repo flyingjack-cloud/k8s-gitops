@@ -1,43 +1,8 @@
-spring:
-  data:
-    redis:
-      host: ${REDIS_HOST}
-      port: 6379
-      password: ${REDIS_PASSWORD} # 通过k8s secret注入
-      database: 0
-      timeout: 5000 #5s
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
-#  logging:
-#    level:
-#      root: INFO
-#      org:
-#        hibernate:
-#          type: TRACE
-#          SQL: DEBUG
-#        springframework:
-#          boot:
-#            autoconfigure:
-#              jdbc: DEBUG
-#      com:
-#        zaxxer:
-#          hikari:
-#            HikariConfig: DEBUG
-#debug: true
-
 springdoc:
   swagger-ui:
     enabled: true
   api-docs:
     enabled: true
-
-#logging:
-#  level:
-#    org.springframework.boot.env: DEBUG
-#    org.springframework.boot.context.config: DEBUG
-#    org.springframework.cloud.kubernetes: DEBUG
 
 management:
   server:
