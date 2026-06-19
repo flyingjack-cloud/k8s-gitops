@@ -12,7 +12,7 @@ spec:
         mode: SIMPLE
         credentialName: internal-tls-cert
       hosts:
-        - "auth.flyingcloud.local"
+        - "auth.flyingjack.top"
 ---
 apiVersion: networking.istio.io/v1
 kind: VirtualService
@@ -20,4 +20,4 @@ metadata:
   name: auth-service
 spec:
   hosts:
-    - "auth.flyingcloud.local"
+    - "auth.flyingjack.top"
