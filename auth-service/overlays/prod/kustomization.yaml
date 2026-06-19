@@ -3,6 +3,7 @@ namespace: prod
 resources:
   - ../../base
   - namespace.yaml
+  - networking.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -18,4 +19,3 @@ configMapGenerator:
 
 patches:
   - path: deployment-patch.yaml
-  - path: networking-patch.yaml
