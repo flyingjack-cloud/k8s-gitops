@@ -4,6 +4,9 @@ resources:
   - ../../base
   - namespace.yaml
 
+generatorOptions:
+  disableNameSuffixHash: true
+
 configMapGenerator:
   - name: auth-service-config
     behavior: merge
