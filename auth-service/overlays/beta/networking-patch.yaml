@@ -1,0 +1,23 @@
+apiVersion: networking.istio.io/v1
+kind: Gateway
+metadata:
+  name: auth-gateway
+spec:
+  servers:
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        credentialName: internal-tls-cert
+      hosts:
+        - "auth-beta.flyingcloud.local"
+---
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: auth-service
+spec:
+  hosts:
+    - "auth-beta.flyingcloud.local"

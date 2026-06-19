@@ -14,7 +14,7 @@ spec:
         mode: SIMPLE
         credentialName: internal-tls-cert # 与cert-manager创建的Secret一致
       hosts:
-        - "auth.flyingcloud.local"
+        - "auth.placeholder.local"
 ---
 apiVersion: networking.istio.io/v1
 kind: VirtualService
@@ -22,7 +22,7 @@ metadata:
   name: auth-service
 spec:
   hosts:
-    - "auth.flyingcloud.local"
+    - "auth.placeholder.local"
   gateways:
     - auth-gateway
   http:

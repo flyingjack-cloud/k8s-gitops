@@ -17,3 +17,4 @@ configMapGenerator:
 
 patches:
   - path: deployment-patch.yaml
+  - path: networking-patch.yaml
