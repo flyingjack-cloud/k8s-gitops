@@ -12,8 +12,6 @@ configMapGenerator:
     behavior: merge
     literals:
       - SPRING_PROFILES_ACTIVE=prod
-    files:
-      - application-prod.yml
 
 # Secrets are pre-created manually in the cluster — see DEPLOY.md
 # Spring Cloud Kubernetes discovers them via label: secret.group
