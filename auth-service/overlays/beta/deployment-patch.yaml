@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: 100.107.74.15:5000/auth-service:beta-ac91f18
+          image: 100.107.74.15:5000/auth-service:beta-4491715
           imagePullPolicy: Always
           ports:
             - containerPort: 5005  # 调试端口
